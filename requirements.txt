@@ -1,0 +1,6 @@
+pandas
+opencv-python==4.9.0.80
+qrcode
+openpyxl
+pillow
+numpy==1.26.4

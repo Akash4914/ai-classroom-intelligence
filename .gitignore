@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+data/attendance.db
+
+faces/
+
+.env
+
+.vscode/
