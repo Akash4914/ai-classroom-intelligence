@@ -1,74 +1,44 @@
-# 🎓 AI Classroom Intelligence System
+# AI Classroom Intelligence System
 
-An AI-powered smart classroom monitoring system that automatically tracks **student attendance and attention levels** using **Face Recognition, Computer Vision, and Machine Learning**, and provides **real-time analytics through a live dashboard**.
+A computer vision based classroom monitoring application that automates student attendance and analyzes student attention in real time. The system uses face recognition for attendance and facial landmark analysis for attention monitoring. It also provides a dashboard for visualization and analytics.
 
----
+Features
 
-# 🚀 Features
+Automated Attendance
+Detects and recognizes student faces using a trained face recognition model and automatically records attendance in the database.
 
-## ✅ Automatic Face Recognition
+Attention Monitoring
+Analyzes facial landmarks to determine whether a student is attentive or inattentive and logs attention data for further analysis.
 
-* Detects and identifies students using webcam
-* Marks attendance automatically
-* Uses OpenCV LBPH Face Recognizer
+Model Training System
+Allows capturing student face images and training a face recognition model for new students.
 
-## ✅ Attention Detection (AI-based)
+Dashboard and Analytics
+Provides a Streamlit dashboard to visualize attendance records, attention logs, and student engagement.
 
-* Detects whether student is:
+Database Integration
+Stores student information, attendance records, and attention logs using SQLite and CSV files.
 
-  * Attentive 👀
-  * Sleeping 😴
-* Uses MediaPipe Face Mesh
-* Eye Aspect Ratio based detection
+Modular Architecture
+Separate modules for face capture, model training, monitoring, dashboard, and database management.
 
-## ✅ Real-time Dashboard
+Tech Stack
 
-* Live attention score
-* Engagement score
-* Attention vs Sleeping charts
-* Class ranking system
+Backend
+Python
+OpenCV
+MediaPipe
+NumPy
+Pandas
+SQLite
 
-## ✅ Class Overview Analytics
+Frontend / Dashboard
+Streamlit
 
-* Top performing student 🏆
-* Lowest attention student ⚠
-* Full class performance graph
+Machine Learning
+OpenCV LBPH Face Recognizer
+Face Landmark Detection
 
-## ✅ Database Storage
-
-* Uses SQLite database
-* Stores:
-
-  * Student ID
-  * Attention Status
-  * Duration
-  * Time
-
-## ✅ Fully Automatic System
-
-No manual input required.
-
-System flow:
-
-Face → Recognition → Attention → Database → Dashboard
-
----
-
-# 🧠 Technologies Used
-
-| Technology | Purpose             |
-| ---------- | ------------------- |
-| Python     | Core programming    |
-| OpenCV     | Face Recognition    |
-| MediaPipe  | Attention Detection |
-| Streamlit  | Dashboard           |
-| SQLite     | Database            |
-| NumPy      | Data Processing     |
-| Pandas     | Data Analysis       |
-| Matplotlib | Graphs              |
-| Seaborn    | Visualization       |
-
----
 
 # 📁 Project Structure
 
@@ -100,127 +70,83 @@ faces/
 requirements.txt
 README.md
 ```
+Installation and Setup
 
----
+1. Clone the Repository
 
-# ⚙️ Installation
-
-## Step 1: Clone Repository
-
-```bash
-git clone https://github.com/yourusername/ai-classroom-intelligence.git
+git clone https://github.com/Akash4914/ai-classroom-intelligence.git
 
 cd ai-classroom-intelligence
-```
 
----
-## Step 2: Create Virtual Environment
+2. Create Virtual Environment
 
-```bash
 python -m venv .venv
-```
 
-Activate:
+3. Activate Virtual Environment
 
 Windows:
-```bash
+
 .venv\Scripts\activate
-```
 
----
+Mac/Linux:
 
-## Step 3: Install Dependencies
+source .venv/bin/activate
 
-```bash
+4. Install Requirements
+
 pip install -r requirements.txt
-```
 
----
+Running the Application
 
-# ▶️ How to Run
+Step 1: Capture Student Faces
 
-## Step 1: Start AI Monitoring System
+python backend/capture_faces.py
 
-```bash
+Step 2: Train Model
+
+python backend/train_model.py
+
+Step 3: Run Monitoring System
+
 python backend/smart_monitor.py
-```
 
----
+Step 4: Run Dashboard
 
-## Step 2: Start Dashboard
-
-```bash
 streamlit run backend/web_dashboard.py
-```
 
----
+Dashboard will open at:
 
-## Step 3: Open browser
-
-```
 http://localhost:8501
-```
 
----
+Database Files
 
-# 📊 Dashboard Features
+attendance.db
+Stores attendance records.
 
-Shows:
+students.csv
+Stores student information.
 
-* Attention Score
-* Engagement Score
-* Class Ranking
-* Live graphs
-* Performance analytics
+attention logs stored during monitoring.
 
----
+Applications
 
-# 🧪 How It Works
+Smart classrooms
+Colleges and universities
+Training institutes
+Student engagement monitoring
+Automated attendance systems
 
-1. Camera captures student face
-2. System identifies student
-3. Detects eye movement
-4. Classifies attention state
-5. Saves into database
-6. Dashboard shows analytics
+Future Improvements
 
----
+Deep learning based face recognition
+Cloud database integration
+Web based deployment
+Multi camera support
+Real time alerts system
 
-# 🎯 Applications
-
-* Smart Classrooms
-* Online Learning Monitoring
-* Schools and Colleges
-* Training Institutes
-* Corporate Training
-
----
-
-# 🧑‍💻 Author
+Author
 
 Akash Prajapati
 
-Computer Science Student
-AI and Data Science Enthusiast
-
----
-
-# 📈 Future Improvements
-
-* Email alerts to teachers
-* Cloud deployment
-* Mobile app integration
-* Emotion detection
-* Multi-camera support
-
----
-
-# ⭐ GitHub
-
-If you like this project, give it a star ⭐
-
----
-
-# 📜 License
-
-This project is for educational purposes.
+GitHub:
+https://github.com/Akash4914
